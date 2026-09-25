@@ -1,0 +1,43 @@
+{
+  "description": "Hero",
+  "id": "hero",
+  "name": "Hero",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default",
+      "docURL": "...",
+      "id": "default",
+      "imageUrl": "https://images.prismic.io/nimbus-keyboards-anton/shared-slices/hero/default/d0b4088f4de0dd5ef077cd74a663cc4f0dcbdd1c.png?auto=compress%2Cformat",
+      "name": "Default",
+      "primary": {
+        "heading": {
+          "config": {
+            "allowTargetBlank": true,
+            "label": "Heading",
+            "multi": "heading1",
+            "placeholder": ""
+          },
+          "type": "StructuredText"
+        },
+        "body": {
+          "config": {
+            "allowTargetBlank": true,
+            "label": "Body",
+            "multi": "paragraph,heading2,strong,em",
+            "placeholder": ""
+          },
+          "type": "StructuredText"
+        },
+        "buy_button_text": {
+          "config": {
+            "label": "Buy Button Text",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      },
+      "version": "initial"
+    }
+  ]
+}
