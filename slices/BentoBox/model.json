@@ -1,0 +1,65 @@
+{
+  "description": "BentoBox",
+  "id": "bento_box",
+  "name": "BentoBox",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default",
+      "docURL": "...",
+      "id": "default",
+      "imageUrl": "https://images.prismic.io/nimbus-keyboards-anton/shared-slices/bento_box/default/439b78dc4b9ed07ae3f296585642282177a7c7ed.png?auto=compress%2Cformat",
+      "name": "Default",
+      "primary": {
+        "heading": {
+          "config": {
+            "allowTargetBlank": true,
+            "label": "Heading",
+            "multi": "heading2",
+            "placeholder": ""
+          },
+          "type": "StructuredText"
+        },
+        "items": {
+          "config": {
+            "fields": {
+              "size": {
+                "config": {
+                  "label": "Size",
+                  "options": [
+                    "Small",
+                    "Medium",
+                    "Large"
+                  ],
+                  "placeholder": ""
+                },
+                "type": "Select"
+              },
+              "image": {
+                "config": {
+                  "constraint": {},
+                  "label": "Image",
+                  "thumbnails": []
+                },
+                "type": "Image"
+              },
+              "text": {
+                "config": {
+                  "allowTargetBlank": true,
+                  "label": "Text",
+                  "multi": "paragraph,strong,em",
+                  "placeholder": ""
+                },
+                "type": "StructuredText"
+              }
+            },
+            "label": "Items",
+            "repeat": true
+          },
+          "type": "Group"
+        }
+      },
+      "version": "initial"
+    }
+  ]
+}
