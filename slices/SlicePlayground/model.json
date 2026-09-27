@@ -1,0 +1,62 @@
+{
+  "description": "SlicePlayground",
+  "id": "slice_playground",
+  "name": "SlicePlayground",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default",
+      "docURL": "...",
+      "id": "default",
+      "imageUrl": "https://images.prismic.io/nimbus-keyboards-anton/shared-slices/slice_playground/default/3e37188b3f8d3a15f413b5651fbf944fd3761856.png?auto=compress%2Cformat",
+      "name": "Default",
+      "primary": {
+        "heading": {
+          "config": {
+            "allowTargetBlank": true,
+            "label": "Heading",
+            "multi": "heading2",
+            "placeholder": ""
+          },
+          "type": "StructuredText"
+        },
+        "decription": {
+          "config": {
+            "allowTargetBlank": true,
+            "label": "Decription",
+            "multi": "paragraph,strong,em",
+            "placeholder": ""
+          },
+          "type": "StructuredText"
+        },
+        "switches": {
+          "config": {
+            "fields": {
+              "switch": {
+                "config": {
+                  "customtypes": [
+                    {
+                      "fields": [
+                        "name",
+                        "color"
+                      ],
+                      "id": "switch"
+                    }
+                  ],
+                  "label": "Switch",
+                  "repeat": false,
+                  "select": "document"
+                },
+                "type": "Link"
+              }
+            },
+            "label": "Switches",
+            "repeat": true
+          },
+          "type": "Group"
+        }
+      },
+      "version": "initial"
+    }
+  ]
+}
