@@ -1,0 +1,36 @@
+{
+  "description": "ColorChanger",
+  "id": "color_changer",
+  "name": "ColorChanger",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default",
+      "docURL": "...",
+      "id": "default",
+      "imageUrl": "https://images.prismic.io/nimbus-keyboards-anton/shared-slices/color_changer/default/ae2fb4e8b6a2cd069ed1eec6c09f7ebfeb53f00b.png?auto=compress%2Cformat",
+      "name": "Default",
+      "primary": {
+        "heading": {
+          "config": {
+            "allowTargetBlank": true,
+            "label": "Heading",
+            "multi": "heading2",
+            "placeholder": ""
+          },
+          "type": "StructuredText"
+        },
+        "description": {
+          "config": {
+            "allowTargetBlank": true,
+            "label": "Description",
+            "multi": "paragraph,strong,em",
+            "placeholder": ""
+          },
+          "type": "StructuredText"
+        }
+      },
+      "version": "initial"
+    }
+  ]
+}

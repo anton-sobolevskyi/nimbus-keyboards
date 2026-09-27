@@ -311,7 +311,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
 
     const keycapTexture = useTexture('/goodwell_uv.png');
 
-    const keycapMat = new THREE.MeshStandardMaterial({
+    const defaultKeycapMat = new THREE.MeshStandardMaterial({
       roughness: 0.7,
       map: useFixedTexture(keycapTexture, (t) => {
         t.flipY = false;
@@ -319,10 +319,12 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
       }),
     });
 
+    const keycapMat = props.keycapMaterial ?? defaultKeycapMat;
+
     const knurlTexture = useTexture('/Knurl.jpg');
 
     const knobMat = new THREE.MeshStandardMaterial({
-      color: '#e24818',
+      color: props.knobColor ?? '#e24818',
       roughness: 0.4,
       metalness: 1,
       bumpMap: useFixedTexture(knurlTexture, (t) => {

@@ -11,6 +11,9 @@
             },
             "bento_box": {
               "type": "SharedSlice"
+            },
+            "color_changer": {
+              "type": "SharedSlice"
             }
           }
         },
