@@ -20,6 +20,9 @@
             },
             "marquee": {
               "type": "SharedSlice"
+            },
+            "purchase_button": {
+              "type": "SharedSlice"
             }
           }
         },

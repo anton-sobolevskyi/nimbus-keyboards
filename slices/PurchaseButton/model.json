@@ -1,0 +1,50 @@
+{
+  "description": "PurchaseButton",
+  "id": "purchase_button",
+  "name": "PurchaseButton",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default",
+      "docURL": "...",
+      "id": "default",
+      "imageUrl": "https://images.prismic.io/nimbus-keyboards-anton/shared-slices/purchase_button/default/1e9a10ca5b8d1c8ee1b2cbde9c19e81138f3d0b4.png?auto=compress%2Cformat",
+      "name": "Default",
+      "primary": {
+        "eyebrow": {
+          "config": {
+            "label": "Eyebrow",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "heading": {
+          "config": {
+            "allowTargetBlank": true,
+            "label": "Heading",
+            "multi": "heading2",
+            "placeholder": ""
+          },
+          "type": "StructuredText"
+        },
+        "button_text": {
+          "config": {
+            "label": "Button Text",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "body": {
+          "config": {
+            "allowTargetBlank": true,
+            "label": "Body",
+            "multi": "paragraph,strong,em",
+            "placeholder": ""
+          },
+          "type": "StructuredText"
+        }
+      },
+      "version": "initial"
+    }
+  ]
+}

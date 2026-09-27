@@ -4,6 +4,7 @@ import BentoBox from "./BentoBox";
 import ColorChanger from "./ColorChanger";
 import Hero from "./Hero";
 import Marquee from "./Marquee";
+import PurchaseButton from "./PurchaseButton";
 import SlicePlayground from "./SlicePlayground";
 
 export const components = {
@@ -11,5 +12,6 @@ export const components = {
 	color_changer: ColorChanger,
 	hero: Hero,
 	marquee: Marquee,
+	purchase_button: PurchaseButton,
 	slice_playground: SlicePlayground
 };
