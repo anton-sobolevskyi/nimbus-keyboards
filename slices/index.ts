@@ -3,11 +3,13 @@
 import BentoBox from "./BentoBox";
 import ColorChanger from "./ColorChanger";
 import Hero from "./Hero";
+import Marquee from "./Marquee";
 import SlicePlayground from "./SlicePlayground";
 
 export const components = {
 	bento_box: BentoBox,
 	color_changer: ColorChanger,
 	hero: Hero,
+	marquee: Marquee,
 	slice_playground: SlicePlayground
 };

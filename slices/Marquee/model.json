@@ -1,0 +1,45 @@
+{
+  "description": "Marquee",
+  "id": "marquee",
+  "name": "Marquee",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default",
+      "docURL": "...",
+      "id": "default",
+      "imageUrl": "https://images.prismic.io/nimbus-keyboards-anton/shared-slices/marquee/default/ac181061fd6b96e4e51de5950e6dbf8fbe563473.png?auto=compress%2Cformat",
+      "name": "Default",
+      "primary": {
+        "direction": {
+          "config": {
+            "label": "Direction",
+            "options": [
+              "Left",
+              "Right"
+            ],
+            "placeholder": ""
+          },
+          "type": "Select"
+        },
+        "phrases": {
+          "config": {
+            "fields": {
+              "text": {
+                "config": {
+                  "label": "Text",
+                  "placeholder": ""
+                },
+                "type": "Text"
+              }
+            },
+            "label": "Phrases",
+            "repeat": true
+          },
+          "type": "Group"
+        }
+      },
+      "version": "initial"
+    }
+  ]
+}
