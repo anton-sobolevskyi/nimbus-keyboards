@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Roboto_Flex } from 'next/font/google';
 import './globals.css';
 import type { ReactNode } from 'react';
+import { Navbar } from '@/components/Navbar';
 
 const robotoFlex = Roboto_Flex({
   variable: '--font-roboto-flex',
@@ -18,7 +19,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${robotoFlex.variable} antialiased`}>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

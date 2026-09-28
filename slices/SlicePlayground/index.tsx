@@ -35,6 +35,7 @@ const SlicePlayground: FC<SlicePlaygroundProps> = ({ slice }) => {
     >
       <FadeIn>
         <h2
+          id={'switch-playground'}
           className={
             'font-bold-slanted scroll-pt-6 text-6xl uppercase md:text-8xl'
           }

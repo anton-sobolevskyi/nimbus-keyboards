@@ -1,0 +1,48 @@
+{
+  "format": "custom",
+  "id": "product",
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "name": {
+        "config": {
+          "label": "Name",
+          "placeholder": ""
+        },
+        "type": "Text"
+      },
+      "price": {
+        "config": {
+          "label": "Price (cents)",
+          "placeholder": ""
+        },
+        "type": "Number"
+      },
+      "image": {
+        "config": {
+          "constraint": {},
+          "label": "Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      },
+      "description": {
+        "config": {
+          "allowTargetBlank": true,
+          "label": "Description",
+          "multi": "paragraph,strong,em",
+          "placeholder": ""
+        },
+        "type": "StructuredText"
+      }
+    }
+  },
+  "label": "Product",
+  "repeatable": true,
+  "status": true
+}

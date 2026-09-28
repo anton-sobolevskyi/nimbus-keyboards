@@ -86,6 +86,7 @@ const ColorChanger: FC<ColorChangerProps> = ({ slice }) => {
       className={
         'relative flex h-[90vh] min-h-250 flex-col overflow-hidden bg-linear-to-br from-[#0f172a] to-[#062f4a] text-white'
       }
+      id={'keycap-changer'}
     >
       <svg
         className={
