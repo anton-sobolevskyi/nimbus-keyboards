@@ -84,7 +84,7 @@ const ColorChanger: FC<ColorChangerProps> = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className={
-        'relative flex h-[90vh] min-h-250 flex-col overflow-hidden bg-linear-to-br from-[#0f172a] to-[#062f4a] text-white'
+        'relative flex h-[90vh] min-h-210 flex-col overflow-hidden bg-linear-to-br from-[#0f172a] to-[#062f4a] text-white'
       }
       id={'keycap-changer'}
     >
@@ -114,7 +114,7 @@ const ColorChanger: FC<ColorChangerProps> = ({ slice }) => {
 
       <Canvas
         camera={{ position: [0, 0.5, 0.5], fov: 45, zoom: 1.5 }}
-        className={'mb-[-10vh] grow'}
+        className={'mb-0 grow md:mb-[-10vh]'}
       >
         <Scene
           selectedTextureId={selectedTextureId}
@@ -149,7 +149,7 @@ const ColorChanger: FC<ColorChangerProps> = ({ slice }) => {
               <button
                 type={'button'}
                 className={cn(
-                  'flex aspect-square flex-col items-center justify-center rounded-lg border-2 p-4 hover:scale-105 motion-safe:transition-all motion-safe:duration-300',
+                  'flex flex-col items-center justify-center rounded-lg border-2 p-4 hover:scale-105 motion-safe:transition-all motion-safe:duration-300 md:aspect-square',
                   {
                     'border-[#81bfed] bg-[#81bfed]/20':
                       selectedTextureId === texture.id,

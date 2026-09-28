@@ -37,7 +37,6 @@ export function Switch(props: SwitchProps) {
   const isPressedRef = useRef<boolean>(false);
   const audio = useRef<HTMLAudioElement>(null);
   const audioTimeout = useRef<ReturnType<typeof setTimeout>>(null);
-  console.log(color);
 
   const allAudio = useRef(
     SOUND_MAP[color].map((url) => {
