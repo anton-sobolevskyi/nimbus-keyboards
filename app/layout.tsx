@@ -4,6 +4,8 @@ import './globals.css';
 import type { ReactNode } from 'react';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
+import { PrismicPreview } from '@prismicio/next';
+import { repositoryName } from '@/prismicio';
 
 const robotoFlex = Roboto_Flex({
   variable: '--font-roboto-flex',
@@ -25,6 +27,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <main>{children}</main>
         <Footer />
       </body>
+      <PrismicPreview repositoryName={repositoryName} />
     </html>
   );
 }
