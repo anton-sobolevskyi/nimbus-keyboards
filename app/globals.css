@@ -39,3 +39,7 @@
     animation: none;
   }
 }
+
+[id] {
+  scroll-margin-top: 6rem;
+}

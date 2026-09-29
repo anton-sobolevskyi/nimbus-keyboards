@@ -16,6 +16,7 @@ import {
 import { Logo } from './Logo';
 import clsx from 'clsx';
 import { checkout } from '@/checkout';
+import { useHasScrolled } from '@/hooks/useHasScrolled';
 
 const DialogContext = createContext<
   [open: boolean, setOpen: (open: boolean) => void]
@@ -25,6 +26,7 @@ export function Navbar() {
   const button = useRef<HTMLButtonElement>(null);
   const state = useState(false);
   const [open, setOpen] = state;
+  const hasScrolled = useHasScrolled(0);
 
   async function handleCheckout() {
     if (button.current) button.current.disabled = true;
@@ -33,7 +35,10 @@ export function Navbar() {
   }
 
   return (
-    <header className="fixed top-0 right-0 left-0 z-50 flex items-center justify-between p-3 md:p-6">
+    <header
+      className="not:data-[top=true]:backdrop-blur-md fixed inset-x-0 top-0 z-50 flex items-center justify-between bg-white/80 p-3 transition-colors data-[top=true]:bg-transparent md:p-6"
+      data-top={!hasScrolled}
+    >
       <Link
         href="/"
         className="shrink-0 hover:scale-105 motion-safe:transition"
@@ -45,8 +50,8 @@ export function Navbar() {
           ref={button}
           onClick={handleCheckout}
           className={clsx(
-            'group relative flex h-12 transform-gpu cursor-pointer items-center justify-center overflow-hidden rounded bg-gradient-to-r from-[#01A7E1] to-[#0196C9] px-6 py-2.5 font-semibold text-white will-change-transform hover:shadow-lg hover:shadow-[#01A7E1]/25 focus:ring-2 focus:ring-[#01A7E1] focus:ring-offset-2 focus:outline-none disabled:grayscale motion-safe:transition-all motion-safe:duration-300 md:text-base',
-            'before:absolute before:inset-0 before:translate-x-[-100%] before:bg-gradient-to-r before:from-white/0 before:via-white/20 before:to-white/0 before:ease-out hover:before:translate-x-[100%] motion-safe:before:transition-transform motion-safe:before:duration-700',
+            'group relative flex h-12 transform-gpu cursor-pointer items-center justify-center overflow-hidden rounded bg-linear-to-r from-[#01A7E1] to-[#0196C9] px-6 py-2.5 font-semibold text-white will-change-transform hover:shadow-lg hover:shadow-[#01A7E1]/25 focus:ring-2 focus:ring-[#01A7E1] focus:ring-offset-2 focus:outline-none disabled:grayscale motion-safe:transition-all motion-safe:duration-300 md:text-base',
+            'before:absolute before:inset-0 before:-translate-x-full before:bg-linear-to-r before:from-white/0 before:via-white/20 before:to-white/0 before:ease-out hover:before:translate-x-full motion-safe:before:transition-transform motion-safe:before:duration-700',
           )}
         >
           <span className="font-bold-slanted relative z-10 flex items-center gap-2 text-xl uppercase">

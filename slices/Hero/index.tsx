@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { Content } from '@prismicio/client';
 import { PrismicRichText, SliceComponentProps } from '@prismicio/react';
 import { Bounded } from '@/components/Bounded';
@@ -13,6 +13,7 @@ import gsap from 'gsap';
 import { Loader } from '@/components/Loader';
 import { useProgress } from '@react-three/drei';
 import { cn } from '@/utils/cn';
+import { checkout } from '@/checkout';
 
 gsap.registerPlugin(useGSAP, SplitText, ScrollTrigger);
 
@@ -51,6 +52,8 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  * Component for "Hero" Slices.
  */
 const Hero: FC<HeroProps> = ({ slice }) => {
+  const button = useRef<HTMLButtonElement>(null);
+
   useGSAP(() => {
     const mm = gsap.matchMedia();
 
@@ -100,6 +103,12 @@ const Hero: FC<HeroProps> = ({ slice }) => {
       });
     });
   });
+
+  async function handleCheckout() {
+    if (button.current) button.current.disabled = true;
+    await checkout();
+    if (button.current) button.current.disabled = false;
+  }
 
   return (
     <section
@@ -162,10 +171,12 @@ const Hero: FC<HeroProps> = ({ slice }) => {
           </div>
 
           <button
+            ref={button}
             type={'button'}
             className={
               'font-bold-slanted group flex w-fit cursor-pointer items-center gap-1 rounded bg-[#01a7e1] px-3 py-1 text-2xl uppercase transition disabled:grayscale'
             }
+            onClick={handleCheckout}
           >
             {slice.primary.buy_button_text}
             <span className={'transition-transform group-hover:translate-x-1'}>

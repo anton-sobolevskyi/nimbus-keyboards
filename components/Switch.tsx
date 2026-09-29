@@ -4,7 +4,6 @@ import { useGLTF } from '@react-three/drei';
 import { GLTF } from 'three-stdlib';
 import { ThreeEvent } from '@react-three/fiber';
 import gsap from 'gsap';
-import { clearTimeout } from 'node:timers';
 
 export const SOUND_MAP = {
   red: ['/sounds/red-1.mp3', '/sounds/red-2.mp3', '/sounds/red-3.mp3'],
