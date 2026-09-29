@@ -12,7 +12,7 @@ import { FadeIn } from '@/components/FadeIn';
 import { cn } from '@/utils/cn';
 import { Canvas } from '@react-three/fiber';
 import { SOUND_MAP, Switch } from '@/components/Switch';
-import { Stage } from '@react-three/drei';
+import { Environment, Stage } from '@react-three/drei';
 import gsap from 'gsap';
 import { LuVolume2 } from 'react-icons/lu';
 
@@ -109,17 +109,13 @@ const SharedCanvas = (props: SharedCanvasProps) => {
       </button>
 
       <Canvas camera={{ position: [1.5, 2, 0], fov: 7 }}>
-        <Stage
-          adjustCamera
-          intensity={0.5}
-          shadows={'contact'}
-          environment={'city'}
-        >
+        <Stage adjustCamera intensity={0.5} shadows={'contact'}>
           <Switch
             rotation={[0, Math.PI / 4, 0]}
             color={colorName}
             hexColor={hexColor ?? ''}
           />
+          <Environment files={['/hdr/blue-studio.hdr']} />
         </Stage>
       </Canvas>
 
